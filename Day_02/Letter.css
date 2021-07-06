@@ -1,0 +1,18 @@
+body{
+    margin: 20px;
+    background-color:darkorange;
+
+
+    
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 70%;
+    bottom: 20%;
+    
+  
+    
+}
