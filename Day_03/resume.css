@@ -17,7 +17,7 @@ body {
   }
   .fcontainer {
     display: flex;
-    width: 70%;
+    width: 71%;
     margin-right: auto;
     margin-left: auto;
     justify-content: space-around;
