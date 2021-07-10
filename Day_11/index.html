@@ -6,14 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+
 </head>
 <body>
-    <div id="quiz"></div>
-    <button id="submit">submit quiz</button>
-    <div id="result"></div>
-    
+    <div class="wrapper">
+        <div class="welcome_text">
+           <form class="welcome_form"  name ="welcome_form" onsubmit="submitForm(event)">
+               <input type="text" name="name">
+               <button type="submit" >Start Quiz</button>
+           </form>
+        </div>
+    </div>
 
-    <script src="index.js"></script>
-    
+    <script>
+        
+    function submitForm(e){
+    e.preventDefault();
+    let name = document.forms["welcome_form"]["name"].value;
+
+
+    //stores user name
+    sessionStorage.setItem("name",name);
+
+    location.href="quiz.html"
+     
+}
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+   
+    

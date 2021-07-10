@@ -1,112 +1,134 @@
-(function(){
-    function buildQuiz(){
-      // variable to store the HTML output
-      const output = [];
-  
-      // for each question...
-      myQuestions.forEach(
-        (currentQuestion, questionNumber) => {
-  
-          // variable to store the list of possible answers
-          const answers = [];
-  
-          // and for each available answer...
-          for(letter in currentQuestion.answers){
-  
-            // ...add an HTML radio button
-            answers.push(
-              `<label>
-                <input type="radio" name="question${questionNumber}" value="${letter}">
-                ${letter} :
-                ${currentQuestion.answers[letter]}
-              </label>`
-            );
-          }
-  
-          // add this question and its answers to the output
-          output.push(
-            `<div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join('')} </div>`
-          );
-        }
-      );
-  
-      // finally combine our output list into one string of HTML and put it on the page
-      quizContainer.innerHTML = output.join('');
+let questions = [
+    {
+      id: 1,
+      question: "What is the full form of RAM ?",
+      answer: "Random Access Memory",
+      options: [
+        "Random Access Memory",
+        "Randomely Access Memory",
+        "Run Aceapt Memory",
+        "None of these"
+      ]
+    },
+    {
+      id: 2,
+      question: "What is the full form of CPU?",
+      answer: "Central Processing Unit",
+      options: [
+        "Central Program Unit",
+        "Central Processing Unit",
+        "Central Preload Unit",
+        "None of these"
+      ]
+    },
+    {
+      id: 3,
+      question: "What is the full form of E-mail",
+      answer: "Electronic Mail",
+      options: [
+        "Electronic Mail",
+        "Electric Mail",
+        "Engine Mail",
+        "None of these"
+      ]
     }
+  ];
+
+
+
+let question_count=0; 
+let points=0;
+let dt = new Date(new Date().setTime(0));
+let ctime = dt.getTime();
+let seconds = Math.floor((ctime % (1000 * 60))/ 1000);
+let minutes = Math.floor((ctime % (1000 * 60 * 60))/( 1000 * 60));
+console.log(seconds, minutes);
+let time = 0;
+
+
+let mytime = setInterval(function(){
+  time++;
   
-    function showResults(){
-  
-      // gather answer containers from our quiz
-      const answerContainers = quizContainer.querySelectorAll('.answers');
-  
-      // keep track of user's answers
-      let numCorrect = 0;
-  
-      // for each question...
-      myQuestions.forEach( (currentQuestion, questionNumber) => {
-  
-        // find selected answer
-        const answerContainer = answerContainers[questionNumber];
-        const selector = `input[name=question${questionNumber}]:checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  
-        // if answer is correct
-        if(userAnswer === currentQuestion.correctAnswer){
-          // add to the number of correct answers
-          numCorrect++;
-  
-          // color the answers green
-          answerContainers[questionNumber].style.color = 'lightgreen';
-        }
-        // if answer is wrong or blank
-        else{
-          // color the answers red
-          answerContainers[questionNumber].style.color = 'red';
-        }
-      });
-  
-      // show number of correct answers out of total
-      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  if(seconds < 59) {
+      seconds++;
+  } else {
+      seconds = 0;
+      minutes++;
+  }
+  let formatted_sec = seconds < 10 ? `0${seconds}`: `${seconds}`;
+  let formatted_min = minutes < 10 ? `0${minutes}`: `${minutes}`
+  document.querySelector("span.time").innerHTML = `${formatted_min} : ${formatted_sec}`;
+}, 1000);
+
+
+window.onload=function(){
+    show(question_count);
+}
+
+function next(){
+    if(question_count==questions.length-1){
+      sessionStorage.setItem("time", time);
+      clearInterval(mytime);
+      location.href="end.html"
+      return ;
+        
+
     }
-  
-    const quizContainer = document.getElementById('quiz');
-    const resultsContainer = document.getElementById('results');
-    const submitButton = document.getElementById('submit');
-    const myQuestions = [
-      {
-        question: "Who invented JavaScript?",
-        answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
-          c: "Brendan Eich"
-        },
-        correctAnswer: "c"
-      },
-      {
-        question: "Which one of these is a JavaScript package manager?",
-        answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
-        },
-        correctAnswer: "c"
-      },
-      {
-        question: "Which tool can you use to ensure code quality?",
-        answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
-        },
-        correctAnswer: "d"
-      }
-    ];
-  
-    // Kick things off
-    buildQuiz();
-  
-    // Event listeners
-    submitButton.addEventListener('click', showResults);
-  })();
+    let user_answer=document.querySelector("li.option.active").innnerHTML;
+
+    //check user answer
+
+    if(user_answer == questions[question_count].answer ){
+        points += 10
+        sessionStorage.setItem("points", points )
+       
+    }
+    console.log(points);
+    
+    
+    question_count++
+    show(question_count)
+
+
+}
+
+function show(count){
+    let question=document.getElementById("questions");
+    let [first, second, third, fourth] = questions[count].options;
+    // console.log(question[count])
+
+    // question.innerHTML="<h2>"+ questions[count].question +"</h2>"
+    question.innerHTML = `
+  <h2>Q${count + 1}. ${questions[count].question}</h2>'
+   <ul class="option_group">
+  <li class="option">${first}</li>
+  <li class="option">${second}</li>
+  <li class="option">${third}</li>
+  <li class="option">${fourth}</li>
+</ul> 
+  `;
+toggleActive();
+
+}
+
+
+function toggleActive(){
+    let option=document.querySelectorAll("li.option");
+
+    for(let i=0; i<option.length; i++){
+        option[i].onclick=function(){
+            for(let i=0; i<option.length; i++){
+                if(option[i].classList.contains("active"))
+                option[i].classList.remove("active")
+            }
+            option[i].classList.add("active");
+
+        }
+    }
+}
+
+
+
+
+ 
+

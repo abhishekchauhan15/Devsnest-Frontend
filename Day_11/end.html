@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="Analytics-amico.svg">
+    <link rel="stylesheet" href="quiz.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your score</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <!-- <i class="icon"></i> -->
+            <img  class ="winner" src="./Appreciation-cuate.png" alt="">
+            <h3 class="username">Well Done! <span class="name"></span></h3>
+            <p class="userpoints">Your points: <span class="points"></span> </p>
+            <p class="usertime">Time taken <span class="time_taken"> </span></p>
+        </div>
+        
+    </div>
+    <script>
+    let user_name=sessionStorage.getItem("name")
+    let user_points=sessionStorage.getItem("points")
+    let user_time=sessionStorage.getItem("time")
+
+
+    document.querySelector("span.name").innerHTML=user_name
+    document.querySelector("span.points").innerHTML=user_points
+    document.querySelector("span.time_taken").innerHTML=": " + user_time + " Seconds"
+
+
+    </script>
+</body>
+</html>
