@@ -1,16 +1,12 @@
-// import logo from './logo.svg';
-import './App.css';
-
+import pic from './meme.jpg';
+import './index.css';
+//day 16
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="card">
-          <img src="https://media.tenor.com/images/a28b86f48a45c8c9abb35f2b1b320323/tenor.gif" alt="logo" />
-          <h1>Meme Card</h1>
-          <p>- IndominouS</p>
-        </div>
-      </header>
+    <div className="card">
+        <img src={pic} className="App-meme" alt="meme" />
+        <h1>This is a Meme </h1>
+        <p>Best meme😏</p>
     </div>
   );
 }

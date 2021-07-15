@@ -1,20 +1,4 @@
-.card{
-  margin-top: 40px;
-  border: 2px solid powderblue;
-  box-shadow: 2px 3px 4px 5px #000;
+
+h1{
+    color: aqua;
 }
-
-img{
- margin-left: 407px;
- margin-top: 20px;
- border-radius: 20px;
-
-}
-
-h1, p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
