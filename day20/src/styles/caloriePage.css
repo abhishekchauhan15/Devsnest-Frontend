@@ -1,0 +1,13 @@
+.page{
+    height: calc(100vh-55px);
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    height: 350px;
+    width: 500px;
+}
