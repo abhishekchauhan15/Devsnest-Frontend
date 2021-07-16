@@ -1,8 +1,34 @@
 import React from "react";
-import "../styles/caloriepage";
+import "../styles/caloriePage.css";
+import CalorieBox from "./calorieBox";
 
 
 const calorieArr=[
+    {
+        title:"pizza",
+        calori: 55
+    
+    },
+    {
+        title:"rice",
+        calori: 50
+    
+    },
+    {
+        title:"pizza",
+        calori: 55
+    
+    },
+    {
+        title:"pizza",
+        calori: 55
+    
+    },
+    {
+        title:"pizza",
+        calori: 55
+    
+    },
     {
         title:"pizza",
         calori: 55
@@ -14,22 +40,16 @@ function CaloriePage(){
     return(
      <div className="page">
     <div className="container">
-    {   
-    calorieArr.map(element =>(
-        <div>
-        <div>{element.title}</div>
-        <div>{element.calori}</div>
-        
+    {/* <p>this is test </p> */}
 
-        </div>
+   {calorieArr.map(element =>(
+        <CalorieBox title={element.title} calories={element.calori}/> 
 
-    ))
-    }
+    ))}
 
     </div>
-
     </div>
-    )
+    );
 }
 
 

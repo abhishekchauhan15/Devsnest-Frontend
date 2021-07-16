@@ -1,4 +1,5 @@
 .page{
+    margin-top:150px;
     height: calc(100vh-55px);
     background-color: #eee;
     display: flex;
@@ -8,6 +9,13 @@
 }
 
 .container{
+    background-color: whitesmoke;
     height: 350px;
     width: 500px;
+    overflow-y:scroll; ;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color:lightgray;
+    border-radius: 7px;
 }
