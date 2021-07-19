@@ -1,56 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Uchen&display=swap");
 .App {
   text-align: center;
-  /* overflow: hidden; */
 }
-h1 {
-  font-size: 40px;
-  font-family: "Uchen", serif;
-  /* box-shadow: 1px 1px 20px white;   */
-  z-index: 1;
-  border-radius: 10px;
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-.card {
-  width: 20%;
-  height: 40%;
-  border-radius: 20px;
-  border: 1px solid white;
-}
-.card:hover {
-}
-img {
-  width: 100%;
-  border-radius: 20px;
-}
+
 .App-logo {
-  height: 30vmin;
-  position: absolute;
-  top: 28%;
-  left: 10%;
+  height: 40vmin;
   pointer-events: none;
-  background-color: white;
-  border-radius: 29px;
-  margin-bottom: 50px;
-  z-index: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .card:hover {
-    animation: card-spin infinite 2s linear;
-  }
-}
-@keyframes card-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
@@ -67,4 +26,13 @@ img {
 
 .App-link {
   color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

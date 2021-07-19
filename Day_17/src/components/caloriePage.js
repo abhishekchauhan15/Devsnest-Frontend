@@ -5,33 +5,33 @@ import CalorieBox from "./calorieBox";
 
 const calorieArr=[
     {
-        title:"pizza",
+        title:"Pizza",
         calori: 55
     
     },
     {
-        title:"rice",
+        title:"Rice",
         calori: 50
     
     },
     {
-        title:"pizza",
-        calori: 55
+        title:"Burger",
+        calori: 47
     
     },
     {
-        title:"pizza",
-        calori: 55
+        title:"Pani Puri ",
+        calori: 12
     
     },
     {
-        title:"pizza",
-        calori: 55
+        title:"Chowmin",
+        calori: 72
     
     },
     {
-        title:"pizza",
-        calori: 55
+        title:"Pasta",
+        calori: 58
     
     }
 ];
@@ -40,7 +40,6 @@ function CaloriePage(){
     return(
      <div className="page">
     <div className="container">
-    {/* <p>this is test </p> */}
 
    {calorieArr.map(element =>(
         <CalorieBox title={element.title} calories={element.calori}/> 

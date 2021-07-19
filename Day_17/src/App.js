@@ -1,16 +1,18 @@
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
+import CaloriePage from "./components/caloriePage"
 import Header from "./components/header"
-import List from "./components/list"
 
 function App() {
-  return(
-  <>
-  <div className="main">
-   <Header/>
-    <List/>
-  </div>
-  </>
-  )
+  return (
+    <div className="App">
+    <Header />
+    <CaloriePage />
+    
+
+      
+    </div>
+  );
 }
 
 export default App;
