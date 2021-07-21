@@ -1,22 +1,9 @@
-import React from "react"
-import box from "../style/box.css"
+import React from "react";
+import "../style/box.css";
 
-
-
-function Box(props){
-    return(
-        <div className="box">
-        
-        
-
-
-
-
-        </div>
-    )
+function Box(props) {
+  const { colorClass } = props;
+  return <div className={colorClass}></div>;
 }
 
-
-
 export default Box;
-

@@ -1,10 +1,6 @@
-.board{
-    margin-left: 50%;
-    margin-top: 20%;
-    display:flex;
-    /* justify-content:center; */
-    text-align:center;
-    width:20vh;
-    height:20vh;
-
-}
+.chessboard {
+    width: 160px;
+    height: 160px;
+    margin: 300px auto;
+    border: 2px solid black;
+  }

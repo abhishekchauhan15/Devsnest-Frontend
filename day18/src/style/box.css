@@ -1,5 +1,11 @@
-.box{
-    width:10px;
-    height:10px;
-
-}
+.White {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+  }
+  
+.Black {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+  }
