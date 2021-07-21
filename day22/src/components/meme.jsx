@@ -1,5 +1,5 @@
 const Meme= ({meme}) => {
-    return "";
+    return " ";
 
 }
 
