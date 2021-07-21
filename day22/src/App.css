@@ -5,8 +5,16 @@
 
 }
 
+.App h1{
+    text-align: center;
+    margin: 10px 0;
+
+}
+
 .template{
     width: 33.33%;
+    display: inline-block;
+    border: 10px solid transparent;
 
 
 }

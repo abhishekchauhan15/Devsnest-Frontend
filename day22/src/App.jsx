@@ -1,9 +1,12 @@
 import {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import "./App.css";
+import Template from "./components/template";
+import Meme from "./components/meme";
 
 function App() {
   const [templates , setTemplates] = useState([]);
+  const [meme , setMeme] = useState(null);
   useEffect(() => {
     fetch( "https://api.imgflip.com/get_memes")
       .then(response => response.json())
@@ -12,15 +15,11 @@ function App() {
       });
     },[]);
 
-  return (
+    return (
     <div className="App">
     <h1>Meme Generator</h1>
-    {
-      templates.map(template => (
-        <div key={template.id} className="template">
-          <div  style ={{backgroundImage : `url(${template.url})`}}className="image"></div> 
-        </div>
-      ))}
+    {meme === null ? <Template templates ={templates}  setMeme={setMeme}/> :<Meme meme={meme} />}
+    <Template templates={templates}/ >
     </div>  
   );
 }
