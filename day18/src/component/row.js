@@ -1,5 +1,5 @@
 import React from "react";
-import row from "../style/row.css"
+import  "../style/row.css"
 import Box from "./box";
 
 

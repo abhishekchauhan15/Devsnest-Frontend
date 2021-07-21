@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import './logo.svg';
 import './App.css';
 import ChessBoard from './component/chessBoard';
 import Header from "./component/header";
