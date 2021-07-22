@@ -45,7 +45,7 @@ function CaloriePage(){
         <CalorieBox title={element.title} calories={element.calori}/> 
 
     ))}
-
+    
     </div>
     </div>
     );
