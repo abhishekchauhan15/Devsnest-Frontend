@@ -1,22 +1,33 @@
-import React from 'react'
+import React from "react";
 
-function Greet(props) {
-    return (
-        <div>
-            <h1>hi {props.name} aka {props.heroname}</h1>
-            {props.children}
-        </div>
-    )
-}
-
-
-// const Greet = (props) =>{
+// function Greet(props) {
 //     return (
-//         <div>   
-            
+//         <div>
+//             <h1>hi {props.name} aka {props.heroname}</h1>
+//             {props.children}
 //         </div>
 //     )
 // }
 
-export default Greet
+// Destructuring props
+function Greet(props) {
+  const { name, heroname, children } = props;
+  return (
+    <div>
+      <h1>
+        hi {name} aka {heroname}
+      </h1>
+      {children}
+    </div>
+  );
+}
 
+// const Greet = (props) =>{
+//     return (
+//         <div>
+
+//         </div>
+//     )
+// }
+
+export default Greet;
