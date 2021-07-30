@@ -1,6 +1,6 @@
 import pic from './meme.jpg';
 import './index.css';
-//day 16
+
 function App() {
   return (
     <div className="card">

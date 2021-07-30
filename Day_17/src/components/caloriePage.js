@@ -41,7 +41,8 @@ function CaloriePage(){
      <div className="page">
     <div className="container">
 
-   {calorieArr.map(element =>(
+   {
+       calorieArr.map(element =>(
         <CalorieBox title={element.title} calories={element.calori}/> 
 
     ))}
