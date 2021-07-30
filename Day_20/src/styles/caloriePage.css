@@ -1,0 +1,21 @@
+.page{
+    margin-top:150px;
+    height: calc(100vh-54px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.container{
+    background-color: whitesmoke;
+    height: 350px;
+    width: 500px;
+    overflow-y:scroll; ;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color:lightgray;
+    border-radius: 7px;
+}
