@@ -1,0 +1,24 @@
+.submitBtn{
+    background-color: #CDF0EA;
+    width: 115px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+input{
+
+    padding: 10px;
+    margin:10px;
+    width: 176px;
+    height: 11px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

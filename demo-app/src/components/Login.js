@@ -10,15 +10,17 @@ export const Login = ({ setIsLogginedIn }) => {
   const [error, setError] = useState("");
 
   const handleOnFormDataChange = e => {
-    console.log(e);
+    // console.log(e);
     const name = e.target.name;
+    // console.log(name);
     const value = e.target.value;
+    // console.log(value);
 
     const updateState = state => {
       const object = { ...state, [name]: value };
       return object;
     };
-
+    // console.log(updateState);
     setFormData(updateState);
   };
 
@@ -59,7 +61,7 @@ export const Login = ({ setIsLogginedIn }) => {
 
         {/* <h2>{formData.email}</h2>
         <h2>{formData.password}</h2> */}
-
+        <lable>enter your email</lable>
         <input
           type="email"
           placeholder="Enter your email"

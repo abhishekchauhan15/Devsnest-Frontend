@@ -1,21 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
+import "../Styles/post.css";
 
 function Post({ post }) {
 
-  const posts=post.map((post, index) => {
+  const handleOndel = () => {
+    post.delete();
+  }
+
+  const handleOnEdit = () => {
+    post.edit();
+  }
+
+  const posts = post.map((post, index) => {
     return (
-      <div key={index}>
-        <h2>{post.title}</h2>
-        <p>{post.calories}</p>
+      <div className="box" key={index}>
+        <h2 className="title">{post.title}</h2>
+        <p className="calories">you have consumed {post.calories} calories</p>
+        <button className="delBtn" onClick={handleOndel}>Delete</button>
+        <button className="editBtn" onClick={handleOnEdit}>Edit</button>
       </div>
     );
-  })
+  });
 
-  return (
-    <div>
-      {posts}
-    </div>
-  );
+  return <div>{posts}</div>;
 }
 
 export default Post;

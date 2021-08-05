@@ -6,14 +6,14 @@ export const Post = ({ post, index, setPosts, posts }) => {
 
   const [editData, setEditData] = useState({
     title: post.title,
-    body: post.body
+    body: post.body,
   });
 
-  const handleOnDataChange = e => {
+  const handleOnDataChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    setEditData(current => ({ ...current, [name]: value }));
+    setEditData((current) => ({ ...current, [name]: value }));
   };
 
   const handleOnSave = () => {
@@ -22,7 +22,7 @@ export const Post = ({ post, index, setPosts, posts }) => {
         return {
           ...post,
           title: editData.title,
-          body: editData.body
+          body: editData.body,
         };
       } else {
         return post;
