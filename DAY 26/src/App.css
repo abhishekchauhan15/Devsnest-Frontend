@@ -1,0 +1,16 @@
+* {
+  color: rgb(0, 0, 0);
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont > * {
+  margin: 10px;
+}
