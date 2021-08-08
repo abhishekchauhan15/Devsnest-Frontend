@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's Questions </title>
+</head>
+<body>
+    <div class="q1">
+        function isarray(arr) {<br>
+            return Array.isArray(arr);<br>
+          }<br>
+          console.log(isarray("w3resource"));<br>
+          console.log(isarray([1, 2, 4, 0]));<br>
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q2">
+        function array_Clone(array) {<br>
+            let arr1 = [];<br>
+            for (let item of array) {<br>
+              arr1.push(item);<br>
+            }<br>
+            return arr1;<br>
+          }<br>
+          console.log(array_Clone([1, 2, 4, 0]));<br>
+          console.log(array_Clone([1, 2, [4, 0]]));<br>
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q3">
+        function first(params, n) {<br>
+            var temp=params.slice(0,n);<br>
+            return temp;<br>
+          
+          }<br>
+          console.log(first([7, 9, 0, -2]));<br>
+          console.log(first([], 3));<br>
+          console.log(first([7, 9, 0, -2], 3));<br>
+          console.log(first([7, 9, 0, -2], 6));<br>
+          console.log(first([7, 9, 0, -2], -3));<br>
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q4">
+        function joiner(params) {<br>
+            var first = params.join(",");<br>
+            var second = params.join("+");<br>
+            return { first, second };<br>
+          }<br>
+          console.log(joiner(["Red", "Green", "White", "Black"]));<br>
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q5">
+        var arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];<br>
+        var mf = 1;<br>
+        var m = 0;<br>
+        var item;<br>
+        for (var i = 0; i < arr1.length; i++) {<br>
+          for (var j = i; j < arr1.length; j++) {<br>
+            if (arr1[i] == arr1[j]) m++;<br>
+            if (mf < m) {<br>
+              mf = m;<br>
+              item = arr1[i];<br>
+            }<br>
+          }<br>
+          m = 0;<br>
+        }<br>
+        console.log(item + " ( " + mf + " times ) ");<br>
+        /-----------------------------------------------------------------/;<br><br>
+        
+    </div>
+    
+</body>
+</html>

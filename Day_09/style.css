@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0; 
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@1,200&display=swap');
 body{
     background:url("imageedit_2_7079046008.png"); 
     background-size: 100%; 
@@ -55,7 +57,13 @@ button:hover{
 
 }
 
-/* h1{
-    display: inline;
+h1{
+    color:#CD113B;
+    font-family: 'Georama', sans-serif;
 
-} */
+}
+
+p{
+    color: #D62AD0;
+    font-family: 'Georama', sans-serif;
+}

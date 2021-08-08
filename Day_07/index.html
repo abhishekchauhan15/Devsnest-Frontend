@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object's Questions</title>
+</head>
+<body>
+    <div class="q1">
+        function myFunction(object) {<br>
+            var text = "";<br>
+            var x;<br>
+            for (x in object) {<br>
+              text += x + ",";<br>
+            }<br>
+            return text;<br>
+          }<br>
+          myFunction({ name: "David Rayy", sclass: "VI", rollno: 12 });<br>
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q2">
+        function deleterollno(object) {<br>
+            delete object.rollno;<br>
+          }<br>
+          deleterollno({ name: "David Rayy", sclass: "VI", rollno: 12 });<br>
+          
+         
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q3">
+        function myFunction(object) {<br>
+            var text = 0;<br>
+            for (var x in object) {<br>
+              text += 1;<br>
+            }<br>
+            return text;<br>
+          }<br>
+          myFunction({ name: "David Rayy", sclass: "VI", rollno: 12 });<br>
+          
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q4">
+        function myFunction(object) {<br>
+            //   console.log(object)<br>
+            var text = "";<br>
+            var x;<br>
+            for (x in object) {<br>
+              text += object[x] + " ,";<br>
+              //     console.log(object[x])<br>
+            }<br>
+            return text;<br>
+          }<br>
+          var library = [<br>
+            { author: "Bill Gates", title: "The Road Ahead", readingStatus: true },<br>
+            { author: "Steve Jobs", title: "Walter Isaacson", readingStatus: true },<br>
+            {<br>
+              author: "Suzanne Collins",<br>
+              title: "Mockingjay: The Final Book of The Hunger Games",<br>
+              readingStatus: false,<br>
+            },<br>
+          ];<br>
+          for (var x in library) {<br>
+            console.log(myFunction(library[x]));<br>
+          }<br>
+          
+          /-----------------------------------------------------------------/;<br><br>
+    </div>
+    <div class="q5">
+        function myFunction(object) {<br>
+            var volume = (22 / 7) * object.radius ** 2 * object.height;<br>
+            console.log(volume.toFixed(4));<br>
+          }<br>
+          myFunction({ radius: 10, height: 15 });<br>
+        /-----------------------------------------------------------------/;<br><br>
+        
+    </div>
+
+    <div class="q6">
+        var library = [<br>
+    { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },<br>
+    { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },<br>
+    {<br>
+      title: "Mockingjay: The Final Book of The Hunger Games",<br>
+      author: "Suzanne Collins",<br>
+      libraryID: 3245,<br>
+    },<br>
+  ];<br>
+  library.sort(function (obj1, obj2) {<br>
+    return obj1["libraryID"] - obj2["libraryID"];<br>
+  });<br>
+    </div>
+
+    
+</body>
+</html>

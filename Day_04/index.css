@@ -1,14 +1,15 @@
 body {
-    margin-top: 100px;
-    
+    margin:0;
+    padding:0;
 }
 #clockContainer{  
     position: relative;
     margin: auto;
-    height: 40vw;
-    width: 40vw; 
+    height: 35vw;
+    width: 35vw; 
     background: url(clock.png) no-repeat;
     background-size: 100%;
+    margin-top: 60px;
 }
 
 #hour, #minute, #second{
@@ -38,4 +39,11 @@ body {
     left: 49.25%;
     opacity: 0.8; 
     
+}
+
+
+h1 ,p{
+    display: flex;
+    justify-content: center;
+
 }
