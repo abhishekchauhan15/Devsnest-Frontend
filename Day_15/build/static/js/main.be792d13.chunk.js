@@ -1,0 +1,2 @@
+(this.webpackJsonpday15=this.webpackJsonpday15||[]).push([[0],{11:function(e,t,n){"use strict";n.r(t);n(1);var c=n(3),s=n.n(c),r=(n(8),n.p,n(9),n(0));s.a.render(Object(r.jsxs)(r.Fragment,{children:[Object(r.jsx)("h1",{children:"Hello World!"}),Object(r.jsx)("p",{children:"This is my first react app"})]}),document.getElementById("root"))},8:function(e,t,n){},9:function(e,t,n){}},[[11,1,2]]]);
+//# sourceMappingURL=main.be792d13.chunk.js.map

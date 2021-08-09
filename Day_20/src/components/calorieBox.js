@@ -1,19 +1,17 @@
 import React from "react";
 import "../styles/calorieBox.css";
 
-function CalorieBox(props, state, setState) {
-    const handleClick=()=>{
-        // console.log("click");
-        let newState= state.filter((el) => el.id !== props.id)
-        setState(newState)
-        
-    }
-    return (
-        <div className="box">
-            <div>{props.title}</div>
-            <div>you have consumed <strong>{props.calories}</strong> today <button onClick={handleClick}>Delete</button></div>
-         </div>
-    );
+function CalorieBox({ id, title, calories, handleClick }) {
+
+  return (
+    <div className="box">
+      <div>{title}</div>
+      <div>
+        you have consumed <strong>{calories}</strong> today{" "}
+        <button onClick={() => handleClick(id)} >Delete</button>
+      </div>
+    </div>
+  );
 }
 
-export default CalorieBox
+export default CalorieBox;

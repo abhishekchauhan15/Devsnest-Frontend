@@ -33,6 +33,19 @@ const calorieArr=[
         title:"Pasta",
         calori: 58
     
+    },
+    {
+        title:"Salad",
+        calori: 40
+
+    },
+    {
+        title:"Fries",
+        calori: 35
+    },
+    {
+        title:"Soup",
+        calori: 40
     }
 ];
 

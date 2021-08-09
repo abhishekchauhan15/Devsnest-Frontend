@@ -1,5 +1,7 @@
-let numbers=["1", "2", "3", "4", "5", "6", "7", "8"];
-numbers=[...numbers, ...numbers];
+let words=["1", "2", "3", "4", "5", "6", "7", "8"];
+
+
+words=[...words, ...words];
 let moves=30;
 let matches=0;
 let gameActive=true;
@@ -18,8 +20,8 @@ for(let i=1; i<=16; i++){
 
     let rand=Math.floor(Math.random()*(16-i));
 
-    back.innerHTML="<h2>"+numbers[rand]+"</h2>";
-    numbers.splice(rand, 1);
+    back.innerHTML="<h2>"+words[rand]+"</h2>";
+    words.splice(rand, 1);
 
     back.classList.add("back");
 
