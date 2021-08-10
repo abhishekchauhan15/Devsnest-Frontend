@@ -1,6 +1,10 @@
 .header{
-    background-color:rgb(103, 224, 103);
+    background-color:#FFE3E3;
     display:flex;
     justify-content:center;
     align-items:center;
+    font-family: 'Georama', sans-serif;
+    color: #FAAD80;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@200&display=swap');
