@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 // import Greet from "./components/Greet";
 // import Counter from "./components/Counter";
 // import Message from "./components/Message";
 // import Subs from "./components/Subs";
 // import FunClick from "./components/FunClick";
-// import Api from "./components/Api";
+import Api from "./components/Api";
 // import Form from "./components/Form";
-import { Login } from "./components/Login";
-import { Posts } from "./components/Posts";
+// import { Login } from "./components/Login";
+// import { Posts } from "./components/Posts";
 
 function App() {
-  const [isLoggedIn, setIsLogginedIn] = useState(false);
+  // const [isLoggedIn, setIsLogginedIn] = useState(false);
   return (
     <div>
       {/* <Greet name="abhi" heroname="superman"> this is a test</Greet>
@@ -27,12 +27,12 @@ function App() {
 
       {/* <FunClick/> */}
 
-      {/* <Api/> */}
+      <Api/>
 
       {/* <Form/> */}
 
 
-      <header>
+      {/* <header>
         <h1>Day 21</h1>
       </header>
 
@@ -42,7 +42,7 @@ function App() {
         <section className="login-wrapper">
           <Login setIsLogginedIn={setIsLogginedIn} />
         </section>
-      )}
+      )} */}
 
 
     </div>

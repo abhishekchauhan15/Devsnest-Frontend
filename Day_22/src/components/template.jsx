@@ -1,17 +1,24 @@
-const Templates = ({templates, setMeme}) => {
-  return (
-    <div className="templates">
-      {templates.map((template) => (
-        <div key={template.id} className="template" onclick = {() =>{ setMeme(template)}}>
-          <div
-            style={{ backgroundImage: `url(${template.url})` }}
-            className="image"
-          ></div>
+import React from "react";
+
+const Template = ({ templates, setMeme }) => {
+    return (
+                   
+        <div className="template">
+            {templates.map((template) => (
+                <div
+                    key={template.id}
+                    onClick={() => {
+                        setMeme(template);
+                    }}
+                >
+                    <div
+                        style={{ backgroundImage: `url(${template.url})` }}
+                        className="image"
+                    ></div>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
-
-export default Templates;
+export default Template;

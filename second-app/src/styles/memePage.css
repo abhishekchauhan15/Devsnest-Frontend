@@ -1,0 +1,6 @@
+.meme img {
+    width:10% !important;
+    height:10% !important;
+    display:flex !important;
+    justify-content: center;
+}
