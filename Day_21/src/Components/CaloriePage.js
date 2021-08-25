@@ -24,7 +24,6 @@ function CaloriePage() {
     e.preventDefault();
     // console.log(title,calories)
 
-    //data empty validation
     if (!title) {
       setError("Title is required");
       return;
