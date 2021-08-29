@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: beige;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.products * {
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  padding: 10px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+.links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.links:hover {
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 7px 6px 9px 0px rgba(46, 45, 45, 0.75);
+  -webkit-box-shadow: 7px 6px 9px 0px rgba(46, 45, 45, 0.75);
+  -moz-box-shadow: 7px 6px 9px 0px rgba(46, 45, 45, 0.75);
+}
+
+.quantity {
+  display: inline;
+  font-size: larger;
+  padding: 9px 16px;
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.cart-card {
+  border: 1px solid black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
